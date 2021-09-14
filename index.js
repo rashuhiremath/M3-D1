@@ -11,11 +11,7 @@ console.log(stringToDisplay("rashmi"))
 
 
 
-function anagram(name, words) {
-    name = name.toLowerCase().split('').sort().join('').trim();
-    words = words.join('').toLowerCase().split('').sort().join('');
-    return name === words;
-}
+
 
 
 
@@ -44,18 +40,18 @@ checkStringsAnagram("rashmi", "imhsar")
 */
 
 console.log("------------EX 3----------")
-function displayAnagramsFromList(s, a) {
-    let myArray = a
-    let string2 = s.split("").sort().join("")
+function displayAnagramsFromList(inputStr, list) {
+
+    let string2 = inputStr.split("").sort().join("")
     console.log(string2)
-    for (let i = 0; i < myArray.length; i++) {
-        if (string2 === myArray.length[i]) {
-            console.log(myArray[i])
+    for (let i = 0; i < list.length; i++) {
+        if (string2 === list[i].split("").sort().join("")) {
+            console.log(list[i])
         }
     }
 
 }
-displayAnagramsFromList("rashmi", ["imhsar", "hi", "hiremath"])
+displayAnagramsFromList("rashmi", ["imhsar", "rahsim", "hiremath"])
 
 /* 4. Given a string (as parameter), return `true` if the string is a palindrome or `false` if it is not. Include spaces and punctuation. */
 console.log("------------EX 4----------")
